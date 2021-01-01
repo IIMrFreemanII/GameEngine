@@ -11,7 +11,6 @@ namespace Hazel {
     }
 
     void Application::Run() {
-        printf("Welcome to Hazel!");
         while (true);
     }
 }
