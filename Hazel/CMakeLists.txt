@@ -27,28 +27,40 @@ set(SOURCE_FILES
         src/Hazel/Events/KeyEvent.h
         src/Hazel/Events/MouseEvent.h
         src/Hazel/Events/ApplicationEvent.h
-        src/Platform/Windows/WindowsWindow.cpp src/Platform/Windows/WindowsWindow.h src/Hazel/Window.h
-        src/Hazel/Layer.cpp src/Hazel/Layer.h src/Hazel/LayerStack.cpp src/Hazel/LayerStack.h)
+        src/Platform/Windows/WindowsWindow.cpp
+        src/Platform/Windows/WindowsWindow.h
+        src/Hazel/Window.h
+        src/Hazel/Layer.cpp
+        src/Hazel/Layer.h
+        src/Hazel/LayerStack.cpp
+        src/Hazel/LayerStack.h
+        src/Hazel/ImGui/ImGuiLayer.cpp
+        src/Hazel/ImGui/ImGuiLayer.h
+        src/Platform/OpenGL/ImGuiOpenGLRenderer.cpp
+        src/Platform/OpenGL/ImGuiOpenGLRenderer.h
+)
 
 set( GLFW_BUILD_DOCS OFF CACHE BOOL  "GLFW lib only" )
 set( GLFW_INSTALL OFF CACHE BOOL  "GLFW lib only" )
 
 add_subdirectory(vendor/GLFW)
 add_subdirectory(vendor/GLAD)
+add_subdirectory(vendor/imgui)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 
 target_include_directories(${PROJECT_NAME}
         PRIVATE
+        ${CMAKE_SOURCE_DIR}/Hazel/vendor/spdlog/include
         ${CMAKE_SOURCE_DIR}/Hazel/vendor/GLFW/include
         ${CMAKE_SOURCE_DIR}/Hazel/vendor/GLAD/include
+        ${CMAKE_SOURCE_DIR}/Hazel/vendor/imgui
 
         PUBLIC
-        ${CMAKE_SOURCE_DIR}/Hazel/vendor/spdlog/include
         ${CMAKE_SOURCE_DIR}/Hazel/src
 )
 
-target_link_libraries(${PROJECT_NAME} glfw Glad opengl32)
+target_link_libraries(${PROJECT_NAME} glfw Glad ImGui opengl32)
 
 target_precompile_headers(${PROJECT_NAME} PUBLIC src/hzpch.h)
 
