@@ -34,16 +34,21 @@ set( GLFW_BUILD_DOCS OFF CACHE BOOL  "GLFW lib only" )
 set( GLFW_INSTALL OFF CACHE BOOL  "GLFW lib only" )
 
 add_subdirectory(vendor/GLFW)
+add_subdirectory(vendor/GLAD)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 
 target_include_directories(${PROJECT_NAME}
-        PRIVATE ${CMAKE_SOURCE_DIR}/Hazel/vendor/GLFW/include
-        PUBLIC ${CMAKE_SOURCE_DIR}/Hazel/vendor/spdlog/include
-        PUBLIC ${CMAKE_SOURCE_DIR}/Hazel/src
+        PRIVATE
+        ${CMAKE_SOURCE_DIR}/Hazel/vendor/GLFW/include
+        ${CMAKE_SOURCE_DIR}/Hazel/vendor/GLAD/include
+
+        PUBLIC
+        ${CMAKE_SOURCE_DIR}/Hazel/vendor/spdlog/include
+        ${CMAKE_SOURCE_DIR}/Hazel/src
 )
 
-target_link_libraries(${PROJECT_NAME} glfw opengl32)
+target_link_libraries(${PROJECT_NAME} glfw Glad opengl32)
 
 target_precompile_headers(${PROJECT_NAME} PUBLIC src/hzpch.h)
 
