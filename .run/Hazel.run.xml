@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Hazel" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$/Hazel" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GameEngine" TARGET_NAME="Hazel" CONFIG_NAME="Debug">
+  <configuration default="false" name="Hazel" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$/Hazel" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HazelSolution" TARGET_NAME="Hazel" CONFIG_NAME="Debug-Visual Studio">
     <method v="2">
       <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
     </method>

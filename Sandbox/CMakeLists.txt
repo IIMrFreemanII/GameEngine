@@ -7,11 +7,13 @@ add_compile_definitions(HZ_PLATFORM_WINDOWS)
 
 set(SOURCE_FILES src/SandboxApp.cpp)
 
-include_directories(
-        ../Hazel/src
-        ${CMAKE_SOURCE_DIR}/Hazel/vendor/spdlog/include
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+
+target_include_directories(
+        ${PROJECT_NAME}
+
+        PUBLIC ${CMAKE_SOURCE_DIR}/Hazel/src
+        PUBLIC ${CMAKE_SOURCE_DIR}/Hazel/vendor/spdlog/include
 )
 
-add_executable(Sandbox ${SOURCE_FILES})
-
-target_link_libraries(Sandbox Hazel)
+target_link_libraries(${PROJECT_NAME} Hazel)

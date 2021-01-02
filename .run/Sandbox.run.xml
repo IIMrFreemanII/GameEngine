@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Sandbox" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$/Sandbox" PASS_PARENT_ENVS_2="true" PROJECT_NAME="GameEngine" TARGET_NAME="Sandbox" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GameEngine" RUN_TARGET_NAME="Sandbox">
+  <configuration default="false" name="Sandbox" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$PROJECT_DIR$/Sandbox" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HazelSolution" TARGET_NAME="Sandbox" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="HazelSolution" RUN_TARGET_NAME="Sandbox">
     <method v="2">
       <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
     </method>
