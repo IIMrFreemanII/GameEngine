@@ -3,7 +3,10 @@ project(Sandbox)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_compile_definitions(HZ_PLATFORM_WINDOWS)
+add_compile_definitions(
+        HZ_PLATFORM_WINDOWS
+        HZ_ENABLE_ASSERTS
+)
 
 set(SOURCE_FILES src/SandboxApp.cpp)
 
