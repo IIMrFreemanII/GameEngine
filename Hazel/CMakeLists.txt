@@ -55,6 +55,7 @@ target_include_directories(${PROJECT_NAME}
         ${CMAKE_SOURCE_DIR}/Hazel/vendor/GLFW/include
         ${CMAKE_SOURCE_DIR}/Hazel/vendor/GLAD/include
         ${CMAKE_SOURCE_DIR}/Hazel/vendor/imgui
+        ${CMAKE_SOURCE_DIR}/Hazel/vendor/glm
 
         PUBLIC
         ${CMAKE_SOURCE_DIR}/Hazel/src

@@ -20,8 +20,10 @@ add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 target_include_directories(
         ${PROJECT_NAME}
 
-        PUBLIC ${CMAKE_SOURCE_DIR}/Hazel/src
-        PUBLIC ${CMAKE_SOURCE_DIR}/Hazel/vendor/spdlog/include
+        PUBLIC
+        ${CMAKE_SOURCE_DIR}/Hazel/vendor/spdlog/include
+        ${CMAKE_SOURCE_DIR}/Hazel/vendor/glm
+        ${CMAKE_SOURCE_DIR}/Hazel/src
 )
 
 target_link_libraries(${PROJECT_NAME} Hazel)
