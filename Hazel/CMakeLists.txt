@@ -1,16 +1,8 @@
 cmake_minimum_required(VERSION 3.17)
 project(Hazel)
 
-set(CMAKE_CXX_STANDARD 20)
-
-#set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MD")
-#set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MDd")
-#message(STATUS "${PROJECT_NAME}: CMAKE_CXX_FLAGS_RELEASE  ${CMAKE_CXX_FLAGS_RELEASE}")
-#message(STATUS "${PROJECT_NAME}: CMAKE_CXX_FLAGS_DEBUG  ${CMAKE_CXX_FLAGS_DEBUG}")
-
 add_compile_definitions(
         HZ_PLATFORM_WINDOWS
-        HZ_BUILD_DLL
         HZ_DEBUG
 )
 
@@ -51,7 +43,7 @@ add_subdirectory(vendor/GLFW)
 add_subdirectory(vendor/GLAD)
 add_subdirectory(vendor/imgui)
 
-add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
+add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
 
 target_include_directories(${PROJECT_NAME}
         PRIVATE
@@ -68,5 +60,3 @@ target_include_directories(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} glfw Glad ImGui opengl32)
 
 target_precompile_headers(${PROJECT_NAME} PUBLIC src/hzpch.h)
-
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy "${PROJECT_NAME}.dll" ${CMAKE_BINARY_DIR}/Sandbox )
