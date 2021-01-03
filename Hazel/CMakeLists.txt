@@ -38,7 +38,7 @@ set(SOURCE_FILES
         src/Hazel/ImGui/ImGuiLayer.h
         src/Platform/OpenGL/ImGuiOpenGLRenderer.cpp
         src/Platform/OpenGL/ImGuiOpenGLRenderer.h
-)
+        src/Hazel/Input.h src/Platform/Windows/WindowsInput.cpp src/Platform/Windows/WindowsInput.h)
 
 set( GLFW_BUILD_DOCS OFF CACHE BOOL  "GLFW lib only" )
 set( GLFW_INSTALL OFF CACHE BOOL  "GLFW lib only" )
