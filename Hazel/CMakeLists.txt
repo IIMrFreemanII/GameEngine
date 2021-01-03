@@ -34,7 +34,7 @@ set(SOURCE_FILES
         src/Hazel/KeyCodes.h
         src/Hazel/MouseButtonCodes.h
         src/Hazel/ImGui/ImGuiBuild.cpp
-)
+        src/Hazel/Renderer/GraphicsContext.h src/Platform/OpenGL/OpenGLContext.cpp src/Platform/OpenGL/OpenGLContext.h)
 
 set( GLFW_BUILD_DOCS OFF CACHE BOOL  "GLFW lib only" )
 set( GLFW_INSTALL OFF CACHE BOOL  "GLFW lib only" )
