@@ -36,9 +36,13 @@ set(SOURCE_FILES
         src/Hazel/LayerStack.h
         src/Hazel/ImGui/ImGuiLayer.cpp
         src/Hazel/ImGui/ImGuiLayer.h
-        src/Platform/OpenGL/ImGuiOpenGLRenderer.cpp
-        src/Platform/OpenGL/ImGuiOpenGLRenderer.h
-        src/Hazel/Input.h src/Platform/Windows/WindowsInput.cpp src/Platform/Windows/WindowsInput.h src/Hazel/KeyCodes.h src/Hazel/MouseButtonCodes.h)
+        src/Hazel/Input.h
+        src/Platform/Windows/WindowsInput.cpp
+        src/Platform/Windows/WindowsInput.h
+        src/Hazel/KeyCodes.h
+        src/Hazel/MouseButtonCodes.h
+        src/Hazel/ImGui/ImGuiBuild.cpp
+)
 
 set( GLFW_BUILD_DOCS OFF CACHE BOOL  "GLFW lib only" )
 set( GLFW_INSTALL OFF CACHE BOOL  "GLFW lib only" )
