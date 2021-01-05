@@ -34,7 +34,7 @@ set(SOURCE_FILES
         src/Hazel/KeyCodes.h
         src/Hazel/MouseButtonCodes.h
         src/Hazel/ImGui/ImGuiBuild.cpp
-        src/Hazel/Renderer/GraphicsContext.h src/Platform/OpenGL/OpenGLContext.cpp src/Platform/OpenGL/OpenGLContext.h src/Hazel/Renderer/Shader.cpp src/Hazel/Renderer/Shader.h src/Hazel/Renderer/Buffer.cpp src/Hazel/Renderer/Buffer.h src/Hazel/Renderer/Renderer.cpp src/Hazel/Renderer/Renderer.h src/Platform/OpenGL/OpenGLBuffer.cpp src/Platform/OpenGL/OpenGLBuffer.h)
+        src/Hazel/Renderer/GraphicsContext.h src/Platform/OpenGL/OpenGLContext.cpp src/Platform/OpenGL/OpenGLContext.h src/Hazel/Renderer/Shader.cpp src/Hazel/Renderer/Shader.h src/Hazel/Renderer/Buffer.cpp src/Hazel/Renderer/Buffer.h src/Hazel/Renderer/Renderer.cpp src/Hazel/Renderer/Renderer.h src/Platform/OpenGL/OpenGLBuffer.cpp src/Platform/OpenGL/OpenGLBuffer.h src/Hazel/Renderer/VertexArray.cpp src/Hazel/Renderer/VertexArray.h src/Platform/OpenGL/OpenGLVertexArray.cpp src/Platform/OpenGL/OpenGLVertexArray.h)
 
 set( GLFW_BUILD_DOCS OFF CACHE BOOL  "GLFW lib only" )
 set( GLFW_INSTALL OFF CACHE BOOL  "GLFW lib only" )
