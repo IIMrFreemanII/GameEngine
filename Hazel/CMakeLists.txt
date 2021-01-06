@@ -34,7 +34,39 @@ set(SOURCE_FILES
         src/Hazel/KeyCodes.h
         src/Hazel/MouseButtonCodes.h
         src/Hazel/ImGui/ImGuiBuild.cpp
-        src/Hazel/Renderer/GraphicsContext.h src/Platform/OpenGL/OpenGLContext.cpp src/Platform/OpenGL/OpenGLContext.h src/Hazel/Renderer/Shader.cpp src/Hazel/Renderer/Shader.h src/Hazel/Renderer/Buffer.cpp src/Hazel/Renderer/Buffer.h src/Hazel/Renderer/Renderer.cpp src/Hazel/Renderer/Renderer.h src/Platform/OpenGL/OpenGLBuffer.cpp src/Platform/OpenGL/OpenGLBuffer.h src/Hazel/Renderer/VertexArray.cpp src/Hazel/Renderer/VertexArray.h src/Platform/OpenGL/OpenGLVertexArray.cpp src/Platform/OpenGL/OpenGLVertexArray.h src/Hazel/Renderer/RenderCommand.cpp src/Hazel/Renderer/RenderCommand.h src/Hazel/Renderer/RendererAPI.cpp src/Hazel/Renderer/RendererAPI.h src/Platform/OpenGL/OpenGLRendererAPI.cpp src/Platform/OpenGL/OpenGLRendererAPI.h src/Hazel/Renderer/OrthographicCamera.cpp src/Hazel/Renderer/OrthographicCamera.h src/Hazel/Core/Timestep.h src/Platform/OpenGL/OpenGLShader.cpp src/Platform/OpenGL/OpenGLShader.h)
+        src/Hazel/Renderer/GraphicsContext.h
+        src/Platform/OpenGL/OpenGLContext.cpp
+        src/Platform/OpenGL/OpenGLContext.h
+        src/Hazel/Renderer/Shader.cpp
+        src/Hazel/Renderer/Shader.h
+        src/Hazel/Renderer/Buffer.cpp
+        src/Hazel/Renderer/Buffer.h
+        src/Hazel/Renderer/Renderer.cpp
+        src/Hazel/Renderer/Renderer.h
+        src/Platform/OpenGL/OpenGLBuffer.cpp
+        src/Platform/OpenGL/OpenGLBuffer.h
+        src/Hazel/Renderer/VertexArray.cpp
+        src/Hazel/Renderer/VertexArray.h
+        src/Platform/OpenGL/OpenGLVertexArray.cpp
+        src/Platform/OpenGL/OpenGLVertexArray.h
+        src/Hazel/Renderer/RenderCommand.cpp
+        src/Hazel/Renderer/RenderCommand.h
+        src/Hazel/Renderer/RendererAPI.cpp
+        src/Hazel/Renderer/RendererAPI.h
+        src/Platform/OpenGL/OpenGLRendererAPI.cpp
+        src/Platform/OpenGL/OpenGLRendererAPI.h
+        src/Hazel/Renderer/OrthographicCamera.cpp
+        src/Hazel/Renderer/OrthographicCamera.h
+        src/Hazel/Core/Timestep.h
+        src/Platform/OpenGL/OpenGLShader.cpp
+        src/Platform/OpenGL/OpenGLShader.h
+        src/Hazel/Renderer/Texture.cpp
+        src/Hazel/Renderer/Texture.h
+        src/Platform/OpenGL/OpenGLTexture.cpp
+        src/Platform/OpenGL/OpenGLTexture.h
+        vendor/stb_image/stb_image.cpp
+        vendor/stb_image/stb_image.h
+        )
 
 set( GLFW_BUILD_DOCS OFF CACHE BOOL  "GLFW lib only" )
 set( GLFW_INSTALL OFF CACHE BOOL  "GLFW lib only" )
@@ -52,6 +84,7 @@ target_include_directories(${PROJECT_NAME}
         ${CMAKE_SOURCE_DIR}/Hazel/vendor/GLAD/include
         ${CMAKE_SOURCE_DIR}/Hazel/vendor/imgui
         ${CMAKE_SOURCE_DIR}/Hazel/vendor/glm
+        ${CMAKE_SOURCE_DIR}/Hazel/vendor/stb_image
 
         PUBLIC
         ${CMAKE_SOURCE_DIR}/Hazel/src
