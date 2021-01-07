@@ -6,7 +6,7 @@ add_compile_definitions(
         HZ_DEBUG
 )
 
-set(SOURCE_FILES
+file(GLOB SOURCE_FILES
 
         src/Hazel.h
         src/Hazel/Log.h
@@ -79,15 +79,15 @@ add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
 
 target_include_directories(${PROJECT_NAME}
         PRIVATE
-        ${CMAKE_SOURCE_DIR}/Hazel/vendor/spdlog/include
-        ${CMAKE_SOURCE_DIR}/Hazel/vendor/GLFW/include
-        ${CMAKE_SOURCE_DIR}/Hazel/vendor/GLAD/include
-        ${CMAKE_SOURCE_DIR}/Hazel/vendor/imgui
-        ${CMAKE_SOURCE_DIR}/Hazel/vendor/glm
-        ${CMAKE_SOURCE_DIR}/Hazel/vendor/stb_image
+        ${CMAKE_CURRENT_SOURCE_DIR}/vendor/spdlog/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/vendor/GLFW/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/vendor/GLAD/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/vendor/imgui
+        ${CMAKE_CURRENT_SOURCE_DIR}/vendor/glm
+        ${CMAKE_CURRENT_SOURCE_DIR}/vendor/stb_image
 
         PUBLIC
-        ${CMAKE_SOURCE_DIR}/Hazel/src
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
 target_link_libraries(${PROJECT_NAME} glfw Glad ImGui opengl32)
