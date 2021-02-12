@@ -57,7 +57,7 @@ namespace Hazel {
             in.seekg(0, std::ios::beg);
             in.read(&result[0], result.size());
             in.close();
-            ;		}
+        }
         else
         {
             HZ_CORE_ERROR("Could not open file '{0}'", filepath);
